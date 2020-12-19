@@ -1,0 +1,52 @@
+You now have a fairly substantial starting toolbox of supervised learning methods that you can use to tackle a host of exciting problems. To make sure that all of these ideas are organized in your mind, go through the list of problems below. For each, identify which supervised learning method (or methods) would be best for addressing that particular problem. Explain your reasoning.
+
+1. Using data from the last 20 Olympics, predict the running times of prospective Olympic sprinters.
+
+
+Start with linear regression. If unable to establish linearity, use KNN Regression, Random Forest Regression,
+If that doesn't work, try SVR, Gradient Boosting Regression.
+
+
+2. You have more features (columns) than rows in your dataset.
+
+Reduce the number of features using KBest and Correlation Matrix.
+SVM try first this.
+Lasso Linear Regression or Logistic Regression
+
+
+3. Identify the most important characteristic for predicting the likelihood of being jailed before age 20.
+
+This is a binary classification problem - being jailed fefore Age 20? Yes/No
+
+
+4. Implement a filter to highlight emails that might be important to the recipient.
+
+Naive Bayes (Bernoulli) is good for classification of binary variable (important/not important)
+
+
+5.You have 1000+ features.
+
+Reduce feature dimensionality by removing highly correlated colls (correlation_matrix)
+And use SelectKBest to see the p value of each feature and select the best.
+Lasso Regression can also help eliminate features that do not explain variance.
+
+
+6. Predict whether someone who adds items to their cart on a website will purchase the items.
+
+This is a binary classification problem : Logistic Regression, K Nearest Neighbor, or Support Vector Classification, or Random Forest Classifier.
+
+7. Your dataset dimensions are 982400 x 500
+
+Reduce dataset size by removing nulls and then taking a random sample.
+Reduce feature dimensionality by removing highly correlated colls (correlation_matrix)and SelectKBest.
+No SVM or Gradient Boost models since they are slow with large datasets.
+
+
+8. Identify faces in an image.
+
+Classification of faces would use either SVC, KNN, Logistic Regression, or Random Forest.
+
+
+9. Predict which of three flavors of ice cream will be most popular with boys vs girls.
+
+A  crosstab. If using a model, the classifier Naive Bayes Multinomial would work.
